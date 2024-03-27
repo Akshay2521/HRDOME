@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dialog_height">240dp</dimen>
+    <dimen name="height_width_expense_actionbtn">40dp</dimen>
+    <dimen name="from_to_date_filter">24dp</dimen>
+</resources>

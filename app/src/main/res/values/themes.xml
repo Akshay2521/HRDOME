@@ -1,0 +1,87 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.HRDRec" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/app_orange</item>
+        <item name="colorSecondaryVariant">@color/app_orange</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+
+    </style>
+
+    <style name="Theme.HRDRec" parent="Base.Theme.HRDRec" />
+
+    <style name="txt_black_normal">
+
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="themeSubHeading" parent="Base.Theme.HRDRec">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+    </style>
+
+    <style name="txt_12_ssp">
+        <item name="android:fontFamily">@font/ebrima</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="edt_12_ssp">
+
+        <item name="hintTextColor">@android:color/darker_gray</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+
+    </style>
+
+
+    <style name="edt_12_ssp_bg" parent="Widget.AppCompat.EditText">
+<item name="android:padding">@dimen/_5sdp</item>
+        <item name="hintTextColor">@android:color/darker_gray</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+
+    </style>
+
+    <style name="MaterialCalendarTheme" parent="ThemeOverlay.MaterialComponents.MaterialCalendar">
+        <item name="materialCalendarHeaderLayout">
+            @style/Widget.MaterialComponents.MaterialCalendar.HeaderLayout
+        </item>
+        <item name="buttonBarPositiveButtonStyle">@style/TextButton.Dialog1</item>
+        <item name="buttonBarNegativeButtonStyle">@style/TextButton.Dialog1</item>
+    </style>
+
+    <style name="TextButton.Dialog1" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/black</item>
+        <item name="background">@drawable/ripple</item>
+    </style>
+
+    <!-- EditText Styles-->
+    <style name="txt_font_12sp" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/ebrima</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="txt_font_bold_12sp" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:fontFamily">@font/ebrima_bold</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:background">@null</item>
+    </style>
+    <style name="MyDialogFragmentStyle" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+</resources>

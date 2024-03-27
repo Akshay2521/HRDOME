@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.app.hrdrec.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/organizationFragment"
+        android:name="com.app.hrdrec.organization.OrganizationFragment"
+        android:label="fragment_organization"
+        tools:layout="@layout/fragment_organization">
+    <argument
+        android:name="moduleData"
+        app:argType="com.app.hrdrec.home.getallmodules.ModuleData"/>
+        <action
+            android:id="@+id/action_organization_to_project"
+            app:destination="@id/projects" />
+    </fragment>
+    <fragment
+        android:id="@+id/allLeavesFragment"
+        android:name="com.app.hrdrec.leaves.AllLeavesFragment"
+        android:label="AllLeavesFragment"
+        tools:layout="@layout/fragment_all_leaves">
+
+    </fragment>
+    <fragment
+        android:id="@+id/managerAuthorisedFragment"
+        android:name="com.app.hrdrec.manager.ManagerAuthorisedFragment"
+        android:label="ManagerAuthorisedFragment">
+    <action
+        android:id="@+id/action_managerAuthorisedFragment_to_allLeavesFragment"
+        app:destination="@id/allLeavesFragment" />
+
+        <action
+            android:id="@+id/action_managerAuthorisedFragment_to_timeSchedulerFragment"
+            app:destination="@id/timeSchedulerFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/timeSchedulerFragment"
+        android:name="com.app.hrdrec.timesheet.TimeSchedulerFragment"
+        android:label="fragment_time_scheduler"
+        tools:layout="@layout/fragment_time_scheduler" />
+    <fragment
+        android:id="@+id/projects"
+        android:name="com.app.hrdrec.projects.Projects"
+        android:label="Projects" >
+    </fragment>
+
+</navigation>

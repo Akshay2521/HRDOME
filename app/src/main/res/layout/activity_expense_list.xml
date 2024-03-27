@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".expenses.ExpenseListActivity">
+
+    <include
+        android:id="@+id/header_main"
+        layout="@layout/header_back" />
+
+    <LinearLayout
+        android:padding="@dimen/_10sdp"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linerAdd"
+            android:layout_marginHorizontal="@dimen/_1sdp"
+            android:layout_width="@dimen/height_width_expense_actionbtn"
+            android:layout_height="@dimen/height_width_expense_actionbtn"
+            android:gravity="center">
+
+            <!-- Add your content inside this LinearLayout, e.g., an ImageView -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/add"
+                android:scaleType="centerCrop" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linerFiter"
+            android:layout_marginHorizontal="@dimen/_1sdp"
+            android:layout_width="@dimen/height_width_expense_actionbtn"
+            android:layout_height="@dimen/height_width_expense_actionbtn"
+            android:gravity="center">
+
+            <!-- Add your content inside this LinearLayout, e.g., an ImageView -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/filter"
+                android:scaleType="centerCrop" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_time_schedule"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_margin="@dimen/_10sdp"
+            android:nestedScrollingEnabled="true" />
+
+        <TextView
+            android:visibility="gone"
+            android:gravity="center"
+            android:id="@+id/txtNoData"
+            android:layout_width="match_parent"
+            android:text="No Data Found"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+</LinearLayout>

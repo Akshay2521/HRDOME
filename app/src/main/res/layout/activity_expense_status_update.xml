@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".expenses.ExpenseListActivity">
+
+    <include
+        android:id="@+id/header_main"
+        layout="@layout/header_back" />
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:weightSum="2"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="@color/color_dark_orange"
+                        android:textStyle="bold"
+                        android:text="Start Date"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/conFromDate"
+                        android:padding="@dimen/_2sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtFrom"
+                            android:layout_width="wrap_content"
+                            android:text=""
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            style="@style/txt_12_ssp"
+                            android:layout_height="wrap_content">
+                        </androidx.appcompat.widget.AppCompatTextView>
+
+
+                        <ImageView
+                            android:id="@+id/imgFrom"
+                            android:layout_width="@dimen/from_to_date_filter"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:src="@drawable/calander"
+                            android:layout_height="@dimen/from_to_date_filter"></ImageView>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:background="@color/color_dark_orange"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_2sdp"/>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textColor="@color/color_dark_orange"
+                        android:textStyle="bold"
+                        android:text="End Date"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/conToDate"
+                        android:padding="@dimen/_2sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/txtTo"
+                            android:layout_width="wrap_content"
+                            android:text=""
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            style="@style/txt_12_ssp"
+                            android:layout_height="wrap_content">
+                        </androidx.appcompat.widget.AppCompatTextView>
+
+
+                        <ImageView
+                            android:id="@+id/imgTo"
+                            android:layout_width="@dimen/from_to_date_filter"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:src="@drawable/calander"
+                            android:layout_height="@dimen/from_to_date_filter"></ImageView>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:background="@color/color_dark_orange"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_2sdp"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textColor="@color/color_dark_orange"
+            android:textStyle="bold"
+            android:text="Purpose"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/txtPurpose"
+                android:background="@null"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+
+            <View
+                android:background="@color/color_dark_orange"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_2sdp"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/recycler_time_schedule"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="60dp"
+            android:nestedScrollingEnabled="true"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <TextView
+            android:visibility="gone"
+            android:gravity="center"
+            android:id="@+id/txtNoData"
+            android:layout_width="match_parent"
+            android:text="No Data Found"
+            android:layout_height="match_parent"/>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_height="50dp">
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnApprove"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="50dp"
+                android:background="@android:color/holo_green_light"
+                android:text="Approve"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnReject"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_height="50dp"
+                android:background="@android:color/holo_purple"
+                android:text="Reject"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_height="50dp"
+                android:background="@android:color/holo_red_light"
+                android:text="Cancel"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp"
+                android:textStyle="bold"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/rel_header"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="4dp"
+
+    >
+
+    <!-- Profile Section -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profileLayout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgCloseDrawer"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_reject"
+            app:tint="@color/white" />
+
+        <!-- Profile Image -->
+        <ImageView
+            android:id="@+id/img_user"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="Profile Image"
+            android:src="@drawable/ic_user" />
+
+        <!-- User Name -->
+        <TextView
+            android:id="@+id/txt_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Akshay"
+            style="@style/txt_font_12sp"
+            app:layout_constraintTop_toBottomOf="@+id/img_user"
+            app:layout_constraintEnd_toStartOf="@+id/ic_down_arrow"
+            android:textSize="@dimen/_13ssp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_5sdp" />
+
+        <ImageButton
+            android:id="@+id/ic_down_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/img_user"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:contentDescription="Edit Profile"
+
+            android:src="@drawable/ic_down_arrow" />
+
+
+        <LinearLayout
+            android:id="@+id/linOption"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_15sdp"
+            app:layout_constraintTop_toBottomOf="@+id/ic_down_arrow"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:id="@+id/profileRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/_15sdp"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!-- Profile Image Placeholder -->
+                <ImageView
+                    android:id="@+id/profileImagePlaceholder"
+                    android:layout_width="@dimen/_23sdp"
+                    android:layout_height="@dimen/_23sdp"
+                    android:src="@drawable/ic_user"
+                    app:tint="@color/white"/>
+
+                <!-- Profile TextView -->
+                <TextView
+                    android:id="@+id/profileTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:text="Profile"
+                    style="@style/txt_font_12sp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13ssp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/editProfileRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                
+                app:layout_constraintTop_toBottomOf="@+id/profileRow">
+
+
+                <ImageView
+                    android:id="@+id/editProfileImagePlaceholder"
+                    android:layout_width="@dimen/_23sdp"
+                    android:layout_height="@dimen/_23sdp"
+                    android:src="@drawable/ic_user"
+                    app:tint="@color/white" />
+
+
+                <TextView
+                    android:id="@+id/editProfileTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:text="Change Password"
+                    style="@style/txt_font_12sp"
+                    android:textSize="@dimen/_13ssp"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/logoutRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                app:layout_constraintTop_toBottomOf="@+id/editProfileRow">
+
+                <ImageView
+                    android:id="@+id/logoutImagePlaceholder"
+                    android:layout_width="@dimen/_23sdp"
+                    android:layout_height="@dimen/_23sdp"
+                    android:src="@drawable/ic_user"
+                    app:tint="@color/white"/>
+
+                <TextView
+                    android:id="@+id/txtSignOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:text="Logout"
+                    style="@style/txt_font_12sp"
+                    android:textSize="@dimen/_13ssp"
+                   />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/white" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+   
+
+
+
+</LinearLayout>

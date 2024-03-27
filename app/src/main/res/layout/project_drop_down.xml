@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="relation"
+            type="String" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+       android:id="@+id/const_row"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textAlignment="viewStart"
+            android:gravity="start"
+            android:padding="@dimen/_10sdp"
+
+            android:maxLines="1"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:ellipsize="end"
+            android:text="@{relation}"
+
+
+            android:id="@+id/txt_select_clinic"
+            style="@style/txt_black_normal"
+            android:layout_height="wrap_content"/>
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@color/light_grey"
+            android:layout_height="@dimen/_1sdp"/>
+    </androidx.appcompat.widget.LinearLayoutCompat></layout>

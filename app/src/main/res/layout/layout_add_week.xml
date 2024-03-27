@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/edt_bg"
+    android:padding="@dimen/_8sdp"
+    android:layout_marginStart="@dimen/_5sdp"
+    android:layout_marginEnd="@dimen/_5sdp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imgClose"
+        android:layout_width="wrap_content"
+        android:layout_gravity="end"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/ic_reject"
+        android:layout_height="wrap_content"></ImageView>
+
+
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    android:layout_height="wrap_content">
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status:"
+               style="@style/txt_12_ssp"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            style="@style/txt_12_ssp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Project Name:"
+            android:layout_marginTop="@dimen/_5sdp"
+            style="@style/txt_12_ssp"/>
+
+        <Spinner
+            android:id="@+id/spinnerProjectName"
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/_45sdp"
+            android:gravity="start"
+
+            android:textAlignment="viewStart"
+            android:scrollbarSize="12sp"
+            android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/edProjectName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter"
+                android:visibility="gone"
+                 style="@style/edt_12_ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Task Name"
+                android:layout_marginTop="@dimen/_5sdp"
+                style="@style/txt_12_ssp"
+                 />
+
+            <EditText
+                android:id="@+id/edtTaskName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter"
+                 style="@style/edt_12_ssp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manager"
+            android:layout_marginTop="@dimen/_5sdp"
+            style="@style/txt_12_ssp"
+            />
+
+        <EditText
+            android:id="@+id/edtManager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter"
+            style="@style/edt_12_ssp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remarks"
+            android:layout_marginTop="@dimen/_5sdp"
+            style="@style/txt_12_ssp"
+            />
+
+        <EditText
+            android:id="@+id/edtRemarks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter"
+            style="@style/edt_12_ssp" />
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_marginTop="@dimen/_5sdp"
+                style="@style/txt_12_ssp"
+                />
+
+            <EditText
+                android:id="@+id/edtSunday"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_width="@dimen/_60sdp"
+                android:padding="@dimen/_5sdp"
+                android:inputType="number"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edt_bg"
+                style="@style/edt_12_ssp_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sun"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                style="@style/txt_12_ssp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_marginTop="@dimen/_5sdp"
+                style="@style/txt_12_ssp"
+                />
+
+            <EditText
+                android:id="@+id/edtMonday"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:padding="@dimen/_5sdp"
+                android:inputType="number"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edt_bg"
+                style="@style/edt_12_ssp_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mon"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                style="@style/txt_12_ssp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_marginTop="@dimen/_5sdp"
+                style="@style/txt_12_ssp"
+                />
+
+            <EditText
+                android:id="@+id/edtTuesday"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_width="@dimen/_60sdp"
+                android:inputType="number"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edt_bg"
+                style="@style/edt_12_ssp_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tue"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                style="@style/txt_12_ssp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_marginTop="@dimen/_5sdp"
+                style="@style/txt_12_ssp"
+                />
+
+            <EditText
+                android:id="@+id/edtWednesday"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_width="@dimen/_60sdp"
+                android:inputType="number"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edt_bg"
+                style="@style/edt_12_ssp_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wed"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                style="@style/txt_12_ssp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_marginTop="@dimen/_5sdp"
+                style="@style/txt_12_ssp"
+                />
+
+            <EditText
+                android:id="@+id/edtThursday"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_width="@dimen/_60sdp"
+                android:inputType="number"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edt_bg"
+                style="@style/edt_12_ssp_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thr"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                style="@style/txt_12_ssp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_marginTop="@dimen/_5sdp"
+                style="@style/txt_12_ssp"
+                />
+
+            <EditText
+                android:id="@+id/edtFriday"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_width="@dimen/_60sdp"
+                android:inputType="number"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edt_bg"
+                style="@style/edt_12_ssp_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fri"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                style="@style/txt_12_ssp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_marginTop="@dimen/_5sdp"
+                style="@style/txt_12_ssp"
+                />
+
+            <EditText
+                android:id="@+id/edtSaturday"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_width="@dimen/_60sdp"
+                android:inputType="number"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/edt_bg"
+                style="@style/edt_12_ssp_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sat"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                style="@style/txt_12_ssp"
+                />
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+</LinearLayout>

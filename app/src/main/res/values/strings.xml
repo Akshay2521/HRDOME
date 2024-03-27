@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">HRDome</string>
+    <string name="alert">Alert</string>
+    <string name="ok">Ok</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="half_day"><u>Half Day</u></string>
+    <string name="full_day"><u>Full Day</u></string>
+    <string name="check_balance"><u>Check Leave Balance</u></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

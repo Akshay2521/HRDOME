@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/filterContent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    android:layout_gravity="top">
+
+    <!-- Your filter content goes here -->
+    <!-- For example, you can add date pickers, input fields, etc. -->
+
+    <LinearLayout
+        android:id="@+id/constDates"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/header_main"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/color_dark_orange"
+                    android:textStyle="bold"
+                    android:text="Start Date"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/conFromDate"
+                    android:padding="@dimen/_2sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtFrom"
+                        android:layout_width="wrap_content"
+                        android:text=""
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        style="@style/txt_12_ssp"
+                        android:layout_height="wrap_content">
+                    </androidx.appcompat.widget.AppCompatTextView>
+
+
+                    <ImageView
+                        android:id="@+id/imgFrom"
+                        android:layout_width="@dimen/from_to_date_filter"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:src="@drawable/calander"
+                        android:layout_height="@dimen/from_to_date_filter"></ImageView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:background="@color/color_dark_orange"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_2sdp"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:textColor="@color/color_dark_orange"
+                    android:textStyle="bold"
+                    android:text="End Date"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/conToDate"
+                    android:padding="@dimen/_2sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtTo"
+                        android:layout_width="wrap_content"
+                        android:text=""
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        style="@style/txt_12_ssp"
+                        android:layout_height="wrap_content">
+                    </androidx.appcompat.widget.AppCompatTextView>
+
+
+                    <ImageView
+                        android:id="@+id/imgTo"
+                        android:layout_width="@dimen/from_to_date_filter"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:src="@drawable/calander"
+                        android:layout_height="@dimen/from_to_date_filter"></ImageView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:background="@color/color_dark_orange"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_2sdp"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textColor="@color/color_dark_orange"
+            android:textStyle="bold"
+            android:text="Status"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <HorizontalScrollView
+            android:scrollbars="none"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtSaved"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_corner_transparent"
+                    android:textColor="@color/color_dark_orange"
+                    android:text="Saved"
+
+                    android:padding="10dp"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:id="@+id/txtSubmitted"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_corner_transparent"
+                    android:textColor="@color/color_dark_orange"
+                    android:text="Submitted"
+
+                    android:padding="10dp"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:id="@+id/txtRejected"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_corner_transparent"
+                    android:textColor="@color/color_dark_orange"
+                    android:text="Rejected"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:id="@+id/txtApproved"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_corner_transparent"
+                    android:textColor="@color/color_dark_orange"
+                    android:text="Approved"
+
+                    android:padding="10dp"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:id="@+id/txtAll"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_corner_transparent"
+                    android:textColor="@color/color_dark_orange"
+                    android:text="All"
+
+                    android:padding="10dp"
+                    android:gravity="center"
+                    />
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+        <ImageView
+            android:src="@drawable/img_btn_go"
+            android:id="@+id/btnSubmit"
+            android:layout_gravity="end"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+
+            />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

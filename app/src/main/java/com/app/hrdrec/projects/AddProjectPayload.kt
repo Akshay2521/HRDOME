@@ -1,0 +1,35 @@
+package com.app.hrdrec.projects
+
+data class AddProjectPayload (
+
+    val projectStatusId: String,
+    val name: String,
+    val description: String,
+    val technology: String,
+    val expectedStartDate: String,
+    val expectedEndDate: String,
+    val actualStartDate: String,
+    val actualEndDate: String,
+    val organizationId: Int,
+    val projectClientId: Int,
+//    val name: String,
+//    val description: String,
+//    val technology: String,
+//    val startDate: EditText,
+//    val endDate: String,
+//    val role: String,
+//    val deleted: String,
+//    val billable: String,
+//    val modifiedBy: EditText,
+//    val createdBy: Int,
+//    val projectClientId: Int,
+//    val projectStatusId: String,
+//    val organizationId: String,
+//    val endDate: String,
+//    val employeeId: EditText,
+//    val projectManagerId: String,
+//    val createdBy: EditText,
+//    val modifiedBy: Int,
+//    val organizationId: Int,
+
+    )

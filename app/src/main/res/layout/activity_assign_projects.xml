@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".organization.projects.AssignProjects">
+
+    <include
+        android:id="@+id/header_main"
+        layout="@layout/header_back" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_main"
+        android:layout_height="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-72dp"
+        tools:layout_editor_absoluteY="-98dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="Assign Role to Particular Employee"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ProjectStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Project Status: "
+                android:textColor="@color/black"
+
+                android:textSize="@dimen/_12ssp" />
+
+            <EditText
+
+                android:id="@+id/edt_projectstatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Project Status"
+
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name: "
+                android:textColor="@color/black"
+
+                android:textSize="@dimen/_12ssp" />
+
+            <EditText
+
+                android:id="@+id/edt_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Name"
+
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/Description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description: "
+                android:textColor="@color/black"
+
+                android:textSize="@dimen/_12ssp" />
+
+            <EditText
+
+                android:id="@+id/edt_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Description"
+
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/Technology"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Technology: "
+                android:textColor="@color/black"
+
+                android:textSize="@dimen/_12ssp" />
+
+            <EditText
+
+                android:id="@+id/edt_technology"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Technology"
+
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/expectedstartdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Expected Start Date: "
+                android:textColor="@color/black"
+
+                android:textSize="@dimen/_12ssp" />
+
+            <EditText
+
+                android:id="@+id/edt_expectedstartdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Expected Start Date"
+
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/expectedenddate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Expected End Date: "
+                android:textColor="@color/black"
+
+                android:textSize="@dimen/_12ssp" />
+
+            <EditText
+
+                android:id="@+id/edt_expectedenddate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Expected End Date"
+
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ActualStartDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Actual Start Date: "
+                android:textColor="@color/black"
+
+                android:textSize="@dimen/_12ssp" />
+
+            <EditText
+
+                android:id="@+id/edt_actualstartdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Actual Start Date"
+
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginHorizontal="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_14sdp"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ActualEndDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Actual End Date: "
+                android:textColor="@color/black"
+
+                android:textSize="@dimen/_12ssp" />
+
+            <EditText
+
+                android:id="@+id/edt_actualenddate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Actual End Date"
+
+                android:textSize="@dimen/_12ssp" />
+        </LinearLayout>
+
+        <Spinner
+            android:id="@+id/client"
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:gravity="start"
+
+            android:scrollbarSize="25sp"
+            android:textAlignment="viewStart" />
+
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_marginHorizontal="@dimen/_14sdp"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:text="Project Resource"
+        android:textColor="@color/app_orange"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content">
+
+
+    </androidx.appcompat.widget.AppCompatTextView>
+
+    <ImageView
+        android:id="@+id/imdAddResource"
+        android:layout_width="@dimen/_30sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/img_add"
+        android:layout_height="@dimen/_30sdp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15sp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintTop_toBottomOf="@id/searchEditText"
+            tools:ignore="MissingConstraints"
+
+            app:layout_constraintBottom_toTopOf="@+id/assignProjectResources"
+            tools:layout_editor_absoluteX="16dp" />
+
+
+        <Button
+            android:id="@+id/btn_save_project"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:text="Save"
+            android:textSize="@dimen/_12ssp" />
+
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
